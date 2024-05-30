@@ -1,0 +1,908 @@
+/*
+* Design By Md Toabur Rahman
+* CSS: v1.0
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400..700&family=Poetsen+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* #FC5811 */
+/* CSS Variable  */
+:root {
+    --text-color: rgb(24, 5, 5);
+    --secondary-text-color: #FC5811;
+    --primary-bg-color: #EFDFD2;
+}
+
+/* Main Container */
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+body {
+    position: relative;
+}
+
+/*---------------- Header Section  -----------------*/
+header {
+    position: sticky;
+    top: 0;
+    background-color: aliceblue;
+    z-index: 9999;
+    -webkit-box-shadow: 0 0 10px var(--secondary-text-color);
+    box-shadow: 0 0 10px var(--secondary-text-color);
+
+
+    & .container {
+        text-align: center;
+        padding: 20px 20px;
+
+        & nav {
+
+            & ul {
+                list-style-type: none;
+            }
+
+            & ul li {
+                display: inline-block;
+                padding: 5px 20px;
+            }
+
+            & ul li:hover a {
+                color: var(--secondary-text-color);
+            }
+
+            & ul li a {
+                text-decoration: none;
+                font-size: 22px;
+                font-weight: 500;
+                color: var(--text-color);
+                font-family: "Edu TAS Beginner", cursive;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+.social_icon {
+        width: 43px;
+        height: 193px;
+        position: absolute;
+        top: 450px;
+        right: 0;
+        align-content: center;
+        text-align: center;
+        background:white;
+        padding: 13px 4px;
+        border-radius: 10px 0px 0px 10px;
+    
+    & i{
+        font-size: 40px;
+        margin-bottom: 10px;
+        color:var(--secondary-text-color);
+        cursor: pointer;
+        transition: .4s;
+    }
+    & i:hover{
+        font-size: 43px;
+        color:var(--text-color);
+    }
+}
+
+/*-------------- Home Banner Section------------- */
+.home_banner {
+    background-color: var(--primary-bg-color);
+    padding: 70px 0px;
+    /* height: 100vh; */
+
+
+    .container {
+        .banner_contant {
+            text-align: center;
+
+            & h1 {
+                color: var(--secondary-text-color);
+                font-size: 55px;
+                line-height: 62px;
+                font-family: "Poetsen One", sans-serif;
+            }
+
+            & h2 {
+                font-size: 35px;
+                line-height: 50px;
+                font-family: "Edu TAS Beginner", cursive;
+            }
+        }
+
+
+        .socail_link {
+            margin-top: 20px;
+
+            & ul {
+                list-style-type: none;
+            }
+
+            & ul li {
+                display: inline-block;
+                padding: 5px 25px;
+                position: relative;
+            }
+
+            & ul li:hover a {
+                color: var(--text-color);
+            }
+
+            & ul li::after {
+                content: '\f106';
+                font-weight: 100;
+                position: absolute;
+                font-family: fontawesome;
+                font-size: 26px;
+                rotate: 90deg;
+                top: 2px;
+                right: 0;
+                color: var(--secondary-text-color);
+                -webkit-transition: .4s;
+                -o-transition: .4s;
+                transition: .4s;
+            }
+
+            & ul li:hover::after {
+                rotate: 50deg;
+                top: -9px;
+                color: var(--text-color);
+            }
+
+            & ul li a {
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                color: var(--secondary-text-color);
+                text-decoration: none;
+
+            }
+        }
+
+        & .banner_img_contant {
+            width: 100%;
+            /* padding: 70px 0; */
+            padding-top: 50px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+
+
+            & .left_col {
+                width: 25%;
+                position: relative;
+
+                & p {
+                    margin-bottom: 30px;
+                    font-size: 18px;
+                    font-weight: 500;
+                    margin-top: 100px;
+                    letter-spacing: 1px;
+                    font-family: "Nunito Sans", sans-serif;
+                }
+
+                & a {
+                    text-align: center;
+                    font-size: 18px;
+                    border-radius: 4px;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    color: white;
+                    padding: 10px 35px;
+                    font-family: "Edu TAS Beginner", cursive;
+                    position: relative;
+                    background-color: var(--secondary-text-color);
+                }
+
+                & a:hover {
+                    color: var(--text-color);
+                }
+
+                & a:after {
+                    content: '\f106';
+                    font-weight: 100;
+                    position: absolute;
+                    font-family: fontawesome;
+                    font-size: 28px;
+                    rotate: 90deg;
+                    top: 4px;
+                    right: 5px;
+                    color: white;
+                    -webkit-transition: .4s;
+                    -o-transition: .4s;
+                    transition: .4s;
+                }
+
+                a:hover::after {
+                    rotate: 50deg;
+                    top: 0;
+                    color: var(--text-color);
+                }
+
+                a::before {
+                    content: '';
+                    background: transparent;
+                    border: 2px solid var(--secondary-text-color);
+                    width: calc(100% + 6px);
+                    height: calc(100% + 6px);
+                    border-radius: 4px;
+                    position: absolute;
+                    top: -5px;
+                    left: -5px;
+                    z-index: 0;
+                    -webkit-transition: all 0.3s;
+                    -o-transition: all 0.3s;
+                    transition: all 0.3s;
+                }
+
+                a:hover::before {
+                    /* border-color: var(--text-color); */
+                    -webkit-box-shadow: 3px 5px 18px var(--secondary-text-color);
+                    box-shadow: 3px 5px 18px var(--secondary-text-color);
+                }
+
+                & .star_rating {
+                    position: absolute;
+                    bottom: 0;
+
+                    img {
+                        width: 30%;
+                    }
+
+                    .rating_box {
+                        margin: 10px 0;
+
+                        i {
+                            font-family: fontawesome;
+                            font-size: 16px;
+                            color: var(--secondary-text-color);
+                            padding: 0 2px;
+                        }
+
+                    }
+
+                    span {
+                        font-family: "Edu TAS Beginner", cursive;
+                        margin-top: 10px;
+                    }
+                }
+            }
+
+            & .mid_col {
+                width: 50%;
+                text-align: center;
+
+                & img {
+                    width: 85%;
+                    border: 1px solid var(--secondary-text-color);
+                    -webkit-box-shadow: 3px 5px 18px var(--secondary-text-color);
+                    box-shadow: 3px 5px 18px var(--secondary-text-color);
+                    border-radius: 50%;
+                }
+            }
+
+            & .right_col {
+                width: 25%;
+                -ms-flex-line-pack: center;
+                align-content: center;
+
+                & h2 {
+                    font-size: 50px;
+                    font-family: "Poetsen One", sans-serif;
+                }
+
+                & span {
+                    font-size: 20px;
+                    font-family: "Edu TAS Beginner", cursive;
+                    font-weight: 600;
+                }
+
+                .Completed_project,
+                .client_rating,
+                .experience {
+                    margin-bottom: 40px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+/*----------Service Section -----------------*/
+.services_section {
+    padding: 70px 0px;
+
+    & .container {
+        & .contant_wrapper {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+
+            & .left_side {
+                width: 50%;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+
+
+                h2 {
+                    font-size: 50px;
+                    font-family: "Poetsen One", sans-serif;
+                    margin-bottom: 30px;
+                }
+
+                p {
+                    padding: 0 50px;
+                    position: relative;
+                    font-size: 18px;
+                    font-family: "Nunito Sans", sans-serif;
+                    margin-bottom: 60px;
+                    text-align: justify;
+
+                }
+
+                p::before {
+                    content: '\f178';
+                    position: absolute;
+                    font-family: fontawesome;
+                    left: 0px;
+                    font-size: 42px;
+                    top: -11px;
+                    color: var(--secondary-text-color);
+                }
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            & .right_side {
+                width: 50%;
+
+                & .col_One {
+                    padding-left: 100px;
+
+                    ul {
+                        list-style-type: none;
+
+                        & li {
+                            font-family: "Nunito Sans", sans-serif;
+                            padding: 15px 0;
+                            position: relative;
+
+                            & a {
+                                padding-left: 50px;
+                                font-size: 22px;
+                                text-decoration: none;
+                                color: var(--text-color);
+                            }
+                        }
+
+                        li::before {
+                            content: '\f064';
+                            font-family: fontawesome;
+                            position: absolute;
+                            font-size: 40px;
+                            color: var(--secondary-text-color);
+
+                        }
+                    }
+
+                }
+
+                & .col_Two {
+                    margin-top: 80px;
+                    padding-left: 100px;
+
+                    & a {
+                        text-align: center;
+                        font-size: 18px;
+                        border-radius: 4px;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        color: white;
+                        padding: 10px 35px;
+                        font-family: "Edu TAS Beginner", cursive;
+                        position: relative;
+                        background-color: var(--secondary-text-color);
+                    }
+
+                    & a:hover {
+                        color: var(--text-color);
+                    }
+
+                    & a:after {
+                        content: '\f106';
+                        font-weight: 100;
+                        position: absolute;
+                        font-family: fontawesome;
+                        font-size: 28px;
+                        rotate: 90deg;
+                        top: 4px;
+                        right: 5px;
+                        color: white;
+                        -webkit-transition: .4s;
+                        -o-transition: .4s;
+                        transition: .4s;
+                    }
+
+                    a:hover::after {
+                        rotate: 50deg;
+                        top: 0;
+                        color: var(--text-color);
+                    }
+
+                    a::before {
+                        content: '';
+                        background: transparent;
+                        border: 2px solid var(--secondary-text-color);
+                        width: calc(100% + 6px);
+                        height: calc(100% + 6px);
+                        border-radius: 4px;
+                        position: absolute;
+                        top: -5px;
+                        left: -5px;
+                        z-index: 0;
+                        -webkit-transition: all 0.3s;
+                        -o-transition: all 0.3s;
+                        transition: all 0.3s;
+                    }
+
+                    a:hover::before {
+                        /* border-color: var(--text-color); */
+                        -webkit-box-shadow: 3px 5px 18px var(--secondary-text-color);
+                        box-shadow: 3px 5px 18px var(--secondary-text-color);
+                    }
+                }
+            }
+        }
+
+    }
+
+
+
+}
+
+/* -----Skills & Experience ----- */
+.skills_experience {
+    padding: 70px 0;
+    background-color: var(--primary-bg-color);
+
+    .container {
+        & .contant_wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+
+            & .left_side {
+
+                & h2 {
+                    font-size: 50px;
+                    font-family: "Poetsen One", sans-serif;
+                    margin-bottom: 30px;
+                }
+
+                & h3 {
+                    font-size: 28px;
+                    font-family: "Poetsen One", sans-serif;
+                }
+
+                .excpt {
+
+                    & p {
+                        padding: 0 50px;
+                        position: relative;
+                        font-size: 18px;
+                        font-family: "Nunito Sans", sans-serif;
+                        margin-bottom: 60px;
+                        text-align: justify;
+                    }
+
+                    & p::before {
+                        content: '\f178';
+                        position: absolute;
+                        font-family: fontawesome;
+                        left: 0px;
+                        font-size: 42px;
+                        top: -11px;
+                        color: var(--secondary-text-color);
+                    }
+                }
+
+                & .skills {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    gap: 15px;
+                    text-align: center;
+                    margin-top: 20px;
+                    padding-right: 50px;
+
+                    & div {
+                        /* background-color: var(--secondary-text-color); */
+                        border: 1px solid var(--secondary-text-color);
+                        padding: 10px;
+                        box-sizing: border-box;
+                        border-radius: 10px;
+                        box-shadow: 0 0 10px var(--secondary-text-color);
+
+                        & i {
+                            font-family: fontawesome;
+                            font-size: 50px;
+                            font-style: normal;
+                        }
+
+                        & p {
+                            text-align: center;
+                            margin: 0 !important;
+                            font-family: "Nunito Sans", sans-serif;
+                            font-size: 18px;
+                        }
+                    }
+
+                    & div:hover {
+                        background-color: wheat;
+                    }
+                }
+            }
+
+            & .right_side {
+                & h3 {
+                    font-size: 28px;
+                    font-family: "Poetsen One", sans-serif;
+                    margin-bottom: 50px;
+                }
+
+                & .experience {
+                    display: grid;
+                    grid-template-columns: 1fr 2fr 1fr;
+                    padding: 35px 0;
+                    border-top: 1px solid var(--secondary-text-color);
+                    padding-left: 40px;
+
+                    span {
+                        font-family: "Nunito Sans", sans-serif;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------ Latest Work ----------*/
+.latest_work_section {
+    padding: 70px 0;
+
+    .container {
+        & h2 {
+            font-size: 50px;
+            font-family: "Poetsen One", sans-serif;
+            margin-bottom: 30px;
+        }
+
+        & .gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+
+            & .gallery_item {
+                cursor: pointer;
+                position: relative;
+
+                & img {
+                    width: 100%;
+                    height: auto;
+                }
+
+                & .caption {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 1;
+                    opacity: 0;
+                    transition: .4s;
+
+                    & i {
+                        font-size: 60px;
+                        color: var(--secondary-text-color);
+                    }
+                }
+
+            }
+
+            & .gallery_item:hover .caption {
+                opacity: 1;
+
+            }
+
+            & .gallery_item::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: #000000bd;
+                left: 0;
+                top: 0;
+                opacity: 0;
+                transition: .4s;
+            }
+
+            & .gallery_item:hover::after {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+/* ----testimonial_section-------- */
+.testimonial_section {
+    padding: 70px 0;
+    background-color: var(--primary-bg-color);
+
+    .container {
+        & h2 {
+            font-size: 50px;
+            font-family: "Poetsen One", sans-serif;
+            margin-bottom: 30px;
+        }
+
+        .all_rivews {
+            .rivews {
+                border: 1px solid var(--secondary-text-color);
+                padding: 20px;
+                border-radius: 5px;
+
+                .client {
+                    display: grid;
+                    grid-template-columns: 1fr 2fr;
+                    margin-bottom: 10px;
+
+                    img {
+                        width: 80%;
+                        border-radius: 100%;
+                    }
+
+                    & .client_name {
+                        align-content: center;
+
+                        h2 {
+                            font-size: 28px;
+                            font-family: "Poetsen One", sans-serif;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+
+                & .review {
+                    p {
+                        text-align: justify;
+                        font-family: "Nunito Sans", sans-serif;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* FAQ Section */
+.faq_section {
+    padding: 70px 0;
+
+    .faq {
+        width: 80%;
+        max-width: 1000px;
+        margin: 0 auto;
+        background: #fff;
+        padding: 20px 0;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        h2 {
+            text-align: center;
+            font-size: 50px;
+            font-family: "Poetsen One", sans-serif;
+            margin-bottom: 30px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .question {
+            width: 100%;
+            text-align: left;
+            background: #f9f9f9;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            outline: none;
+            font-size: 18px;
+            transition: background 0.3s;
+        }
+
+        .question:hover {
+            background: #e9e9e9;
+        }
+
+        .answer {
+            display: none;
+            padding: 15px;
+            background: #f9f9f9;
+        }
+
+        .answer p {
+            margin: 0;
+        }
+
+
+    }
+}
+
+
+
+/* End */
+
+
+/*---------- Footer style -----------*/
+#footer_section {
+    background-color: var(--secondary-text-color);
+    padding: 70px 0 10px 0;
+
+    .container {
+        .footer_contant {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            border-bottom: 4px solid var(--primary-bg-color);
+
+            & .left_side {
+                h2 {
+                    font-size: 45px;
+                    color: var(--primary-bg-color);
+                    font-family: "Poetsen One", sans-serif;
+                    margin-bottom: 60px;
+                }
+
+                & .contact_listOne {
+                    border-top: 2px solid var(--primary-bg-color);
+                    padding: 30px 0 0 50px;
+                    margin-bottom: 30px;
+                    position: relative;
+
+                    & span {
+                        color: var(--primary-bg-color);
+                        font-family: "Poetsen One", sans-serif;
+
+                    }
+
+                    & a {
+                        text-decoration: none;
+                        color: var(--primary-bg-color);
+                        font-family: "Nunito Sans", sans-serif;
+                    }
+                }
+
+                & .contact_listOne::before {
+                    content: '\f0e0';
+                    position: absolute;
+                    font-family: fontawesome;
+                    font-size: 30px;
+                    color: var(--primary-bg-color);
+                    left: 0;
+
+
+                }
+
+                & .contact_listTwo {
+                    border-top: 2px solid var(--primary-bg-color);
+                    padding: 30px 0 50px 50px;
+                    position: relative;
+
+                    & span {
+                        color: var(--primary-bg-color);
+                        font-family: "Poetsen One", sans-serif;
+                    }
+
+                    & a {
+                        text-decoration: none;
+                        color: var(--primary-bg-color);
+                        font-family: "Nunito Sans", sans-serif;
+                    }
+                }
+
+                & .contact_listTwo::before {
+                    content: '\f3c5';
+                    position: absolute;
+                    font-family: fontawesome;
+                    font-size: 30px;
+                    color: var(--primary-bg-color);
+                    left: 0;
+                }
+
+            }
+
+            & .right_side {
+                align-content: center;
+
+                .icon-div {
+                    width: 150px;
+                    margin: 0 auto;
+                    position: relative;
+                }
+
+                .icon-div::after {
+                    content: '\f075';
+                    position: absolute;
+                    font-family: fontawesome;
+                    font-size: 150px;
+                    color: var(--primary-bg-color);
+                    top: -140px;
+                }
+
+                .icon-div::before {
+                    content: 'Say Hi!';
+                    position: absolute;
+                    z-index: 1;
+                    right: 37px;
+                    top: -77px;
+                    font-size: 25px;
+                    color: var(--secondary-text-color);
+                    font-family: "Poetsen One", sans-serif;
+                }
+            }
+        }
+
+        & .socket_section {
+            padding: 20px 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+
+            & span {
+                color: var(--primary-bg-color);
+                font-size: 18px;
+                font-family: "Nunito Sans", sans-serif;
+            }
+
+            i {
+                font-family: fontawesome;
+                color: var(--primary-bg-color);
+                font-size: 30px;
+
+            }
+
+            i:nth-child(2) {
+                padding: 0 15px;
+            }
+
+            & a {
+                text-decoration: none;
+                color: var(--primary-bg-color);
+                font-size: 18px;
+                font-family: "Nunito Sans", sans-serif;
+            }
+
+        }
+
+        & .socket_section div:nth-child(2) {
+            text-align: center;
+        }
+
+        & .socket_section div:last-child {
+            text-align: right;
+        }
+
+    }
+}

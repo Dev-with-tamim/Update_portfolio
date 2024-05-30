@@ -1,0 +1,28 @@
+@media only screen and (max-width:1300px) {
+    .services_section {
+        & .container {
+            & .contant_wrapper {
+                & .right_side {
+                    & .col_One {
+                        padding-left: 50px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width:1150px) {
+    .services_section {
+        & .container {
+            & .contant_wrapper {
+                & .left_side {
+                    width: 100%;
+                    text-align: center;
+                }
+                & .right_side {
+                    width: 100%;
+                  }
+            }
+        }
+    }
+}

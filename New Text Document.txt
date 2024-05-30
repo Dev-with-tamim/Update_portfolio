@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400..700&family=Poetsen+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --text-color: rgb(24, 5, 5);
+    --secondary-text-color: #FC5811;
+    --primary-bg-color: #EFDFD2;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: aliceblue;
+    z-index: 1;
+    box-shadow: 0 0 10px var(--secondary-text-color);
+
+    & .container {
+        text-align: center;
+        padding: 50px 20px;
+
+        & nav {
+
+            & ul {
+                list-style-type: none;
+            }
+
+            & ul li {
+                display: inline-block;
+                padding: 5px 20px;
+            }
+
+            & ul li:hover a {
+                color: var(--secondary-text-color);
+            }
+
+            & ul li a {
+                text-decoration: none;
+                font-size: 22px;
+                font-weight: 500;
+                color: var(--text-color);
+                font-family: "Edu TAS Beginner", cursive;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+.home_banner {
+    background-color: var(--primary-bg-color);
+    padding: 70px 0px;
+    /* height: 100vh; */
+
+
+    .container {
+        .banner_contant {
+            text-align: center;
+
+            & h1 {
+                color: var(--secondary-text-color);
+                font-size: 55px;
+                line-height: 62px;
+                font-family: "Poetsen One", sans-serif;
+            }
+
+            & h2 {
+                font-size: 35px;
+                line-height: 50px;
+                font-family: "Edu TAS Beginner", cursive;
+            }
+        }
+
+
+        .socail_link {
+            margin-top: 20px;
+
+            & ul {
+                list-style-type: none;
+            }
+
+            & ul li {
+                display: inline-block;
+                padding: 5px 25px;
+                position: relative;
+            }
+
+            & ul li:hover a {
+                color: var(--text-color);
+            }
+
+            & ul li::after {
+                content: '\f106';
+                font-weight: 100;
+                position: absolute;
+                font-family: fontawesome;
+                font-size: 26px;
+                rotate: 90deg;
+                top: 2px;
+                right: 0;
+                color: var(--secondary-text-color);
+                transition: .4s;
+            }
+
+            & ul li:hover::after {
+                rotate: 50deg;
+                top: -9px;
+                color: var(--text-color);
+            }
+
+            & ul li a {
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                color: var(--secondary-text-color);
+                text-decoration: none;
+
+            }
+        }
+
+        & .banner_img_contant {
+            width: 100%;
+            /* padding: 70px 0; */
+            padding-top: 70px;
+            display: flex;
+            flex-wrap: wrap;
+
+
+            & .left_col {
+                width: 25%;
+                position: relative;
+
+                & p {
+                    margin-bottom: 30px;
+                    font-size: 18px;
+                    font-weight: 500;
+                    margin-top: 100px;
+                    letter-spacing: 1px;
+                    font-family: "Edu TAS Beginner", cursive;
+                }
+
+                & a {
+                    text-align: center;
+                    font-size: 18px;
+                    border-radius: 4px;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    color: white;
+                    padding: 10px 35px;
+                    font-family: "Edu TAS Beginner", cursive;
+                    position: relative;
+                    background-color: var(--secondary-text-color);
+                }
+
+                & a:hover {
+                    color: var(--text-color);
+                }
+
+                & a:after {
+                    content: '\f106';
+                    font-weight: 100;
+                    position: absolute;
+                    font-family: fontawesome;
+                    font-size: 28px;
+                    rotate: 90deg;
+                    top: 4px;
+                    right: 5px;
+                    color: white;
+                    transition: .4s;
+                }
+
+                a:hover::after {
+                    rotate: 50deg;
+                    top: 0;
+                    color: var(--text-color);
+                }
+
+                a::before {
+                    content: '';
+                    background: transparent;
+                    border: 2px solid var(--secondary-text-color);
+                    width: calc(100% + 6px);
+                    height: calc(100% + 6px);
+                    border-radius: 4px;
+                    position: absolute;
+                    top: -5px;
+                    left: -5px;
+                    z-index: 0;
+                    transition: all 0.3s;
+                }
+
+                a:hover::before {
+                    /* border-color: var(--text-color); */
+                    box-shadow: 3px 5px 18px var(--secondary-text-color);
+                }
+
+                & .star_rating {
+                    position: absolute;
+                    bottom: 0;
+
+                    img {
+                        width: 30%;
+                    }
+
+                    .rating_box {
+                        margin: 10px 0;
+
+                        i {
+                            font-family: fontawesome;
+                            font-size: 16px;
+                            color: var(--secondary-text-color);
+                            padding: 0 2px;
+                        }
+
+                    }
+
+                    span {
+                        font-family: "Edu TAS Beginner", cursive;
+                        margin-top: 10px;
+                    }
+                }
+            }
+
+            & .mid_col {
+                width: 50%;
+                text-align: center;
+
+                & img {
+                    width: 85%;
+                    border: 1px solid var(--secondary-text-color);
+                    box-shadow: 3px 5px 18px var(--secondary-text-color);
+                    border-radius: 50%;
+                }
+            }
+
+            & .right_col {
+                width: 25%;
+                align-content: center;
+
+                & h2 {
+                    font-size: 50px;
+                    font-family: "Poetsen One", sans-serif;
+                }
+
+                & span {
+                    font-size: 20px;
+                    font-family: "Edu TAS Beginner", cursive;
+                    font-weight: 600;
+                }
+
+                .Completed_project,
+                .client_rating,
+                .experience {
+                    margin-bottom: 40px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.services_section {
+    padding: 70px 0px;
+
+    & .container {
+        & .contant_wrapper {
+            display: flex;
+            flex-wrap: wrap;
+
+            & .left_side {
+                width: 50%;
+                box-sizing: border-box;
+
+                h2 {
+                    font-size: 50px;
+                    font-family: "Poetsen One", sans-serif;
+                    margin-bottom: 30px;
+                }
+
+                p {
+                    padding: 0 150px;
+                    position: relative;
+
+                }
+
+                p::before {
+                    content: '\f178';
+                    position: absolute;
+                    font-family: fontawesome;
+                    left: 90px;
+                    font-size: 50px;
+                    top: -19px;
+                    color:var(--secondary-text-color);
+                }
+            }
+
+            & .right_side {
+                width: 50%;
+            }
+        }
+
+    }
+
+
+
+}
